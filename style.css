@@ -1,0 +1,77 @@
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #0b1220;
+  color: #e5eaf3;
+  font-family: Arial, sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+  border-bottom: 1px solid #26334a;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.logo { font-size: 22px; font-weight: bold; color: #65b9ff; }
+nav { display: flex; gap: 24px; }
+a { color: #a9b9d0; text-decoration: none; }
+.status { color: #51dfa0; font-size: 13px; }
+main { max-width: 1100px; margin: auto; padding: 55px 24px; }
+.hero { padding: 35px 0 55px; }
+.eyebrow { color: #65b9ff; letter-spacing: 2px; font-size: 12px; }
+h1 { font-size: clamp(42px, 7vw, 72px); margin: 18px 0; }
+h1 span { color: #65b9ff; }
+.hero > p:not(.eyebrow) { color: #a9b9d0; max-width: 540px; line-height: 1.7; }
+.primary, button {
+  background: #2586e8;
+  color: white;
+  border: 0;
+  padding: 13px 19px;
+  border-radius: 7px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.metrics, .security-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+}
+.metrics article, .panel, .security-grid article {
+  background: #121e30;
+  border: 1px solid #263751;
+  border-radius: 12px;
+  padding: 24px;
+}
+.metrics small, .metrics p, .panel > p, .security-grid p {
+  color: #9cacc3;
+}
+.metrics h2 { color: #65b9ff; }
+.panel { margin-top: 35px; }
+form { display: flex; gap: 10px; flex-wrap: wrap; }
+input {
+  flex: 1;
+  min-width: 200px;
+  padding: 14px;
+  background: #0b1220;
+  border: 1px solid #34445d;
+  color: white;
+  border-radius: 7px;
+}
+.result { margin-top: 18px; color: #51dfa0; }
+.examples { display: flex; gap: 10px; flex-wrap: wrap; }
+.examples button { background: #263751; }
+.note { font-size: 12px; line-height: 1.6; }
+footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid #26334a;
+  color: #9cacc3;
+}
+@media(max-width:600px) {
+  header { align-items: flex-start; flex-direction: column; }
+  nav { flex-wrap: wrap; }
+}
