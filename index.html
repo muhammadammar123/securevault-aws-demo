@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecureVault | Security Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">◈ SecureVault</div>
+    <nav>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#inspector">Request Inspector</a>
+      <a href="#security">Security</a>
+    </nav>
+    <span class="status">● Application Online</span>
+  </header>
+
+  <main>
+    <section class="hero" id="dashboard">
+      <p class="eyebrow">SECURE WEB INFRASTRUCTURE</p>
+      <h1>Your security.<br><span>Our priority.</span></h1>
+      <p>Monitor application deployments and understand how
+        AWS security services protect web traffic.</p>
+      <a class="primary" href="#inspector">Explore Security Testing →</a>
+    </section>
+
+    <section class="metrics">
+      <article><small>Application</small><h2>Online</h2><p>EC2 hosted</p></article>
+      <article><small>Deployment</small><h2 id="version">v1.0.0</h2><p>GitHub release</p></article>
+      <article><small>Protection</small><h2>WAF</h2><p>Web traffic inspection</p></article>
+    </section>
+
+    <section id="inspector" class="panel">
+      <p class="eyebrow">REQUEST INSPECTOR</p>
+      <h2>Test a web request</h2>
+      <p>Enter a search term to generate a request to the application.</p>
+      <form id="searchForm">
+        <input id="searchInput" placeholder="Try searching for laptops..." required>
+        <button type="submit">Send Request</button>
+      </form>
+      <div id="result" class="result">Ready to inspect requests.</div>
+      <div class="examples">
+        <button type="button" data-test="normal">Normal request</button>
+        <button type="button" data-test="sqli">SQLi test</button>
+        <button type="button" data-test="xss">XSS test</button>
+      </div>
+      <p class="note">These buttons generate test requests. Actual blocking is performed by AWS WAF only when correctly configured and associated with the application.</p>
+    </section>
+
+    <section id="security" class="panel">
+      <p class="eyebrow">SECURITY LAYERS</p>
+      <h2>Protection at the edge of your application</h2>
+      <div class="security-grid">
+        <article><h3>SQL Injection</h3><p>Inspect requests for potentially malicious database query patterns.</p></article>
+        <article><h3>Cross-Site Scripting</h3><p>Detect suspicious script content in incoming requests.</p></article>
+        <article><h3>Rate Limiting</h3><p>Limit excessive requests from a single source.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>SecureVault · AWS CodePipeline + AWS WAF Demonstration</footer>
+  <script src="script.js"></script>
+</body>
+</html>
